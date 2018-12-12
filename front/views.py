@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect, reverse
 
 # Create your views here.
 from django.http import HttpResponse
+from django.template.loader import render_to_string
+
+
 
 def index(request):
     # ?username = xxx
@@ -16,3 +19,9 @@ def index(request):
 
 def login(request):
     return HttpResponse('前台登录页')
+
+
+def tem_str(request):
+    # html = render_to_string('index.html')
+    # return HttpResponse(html)
+    return render(request, 'index.html')
