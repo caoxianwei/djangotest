@@ -24,4 +24,8 @@ def login(request):
 def tem_str(request):
     # html = render_to_string('index.html')
     # return HttpResponse(html)
-    return render(request, 'index.html')
+    data = {
+        'param': 123,
+        'id': 2147,
+    }
+    return render(request, 'index.html', {'person': 'sunday', 'data': data})
