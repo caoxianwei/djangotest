@@ -21,6 +21,7 @@ from book.views import book
 from movie.views import movie
 from books import views
 from movies import views as movies
+from urlmodel import views as urlmodel
 
 
 def index(request):
@@ -46,6 +47,7 @@ urlpatterns = [
     path('cms/', include('cms.urls', namespace='cms')),
     path('cms1/', include('cms.urls', namespace='cms1')),
     path('cms2/', include('cms.urls', 'cms2')),
+    path('url/', include('urlmodel.urls', 'urlmodel')),
 
     path('movies/', include([
         path('', movies.index),

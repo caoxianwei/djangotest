@@ -6,9 +6,24 @@
 </head>
 <body>
 d模版渲染的字符串
+<div>
 
-{{ person }}
-{{ data.id }}
-{{ data.keys }}
+    <p>{{ person }}</p><br/>
+    {{ data.id }}<br/>
+    {{ data.keys }}<br/>
+    {{ persons.1 }}<br/>
+</div>
+
+--for
+<ul>
+    {% for person in persons %}
+        <li>{{ person }}</li>
+    {% endfor %}
+</ul>
+
+{% for key in data.keys %}
+    <p>{{ key }}</p>
+{% endfor %}
+
 </body>
 </html>
