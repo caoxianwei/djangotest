@@ -6,4 +6,5 @@ app_name = 'front'
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('extends/', views.extends, name='extends'),
 ]

@@ -11,3 +11,10 @@ def index(request):
         'greet': greet
     }
     return render(request, 'urlmodel.html', context=context)
+
+
+def extends(request):
+    context = {
+        'greet': greet
+    }
+    return render(request, 'extends.html', context=context)

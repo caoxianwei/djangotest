@@ -3,6 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 from django.http import HttpResponse
+from django.db import connection
 
 
 def book(request):
@@ -20,3 +21,8 @@ def author_detail(request):
     anthor_id = request.GET.get('id')
     text = '作者的id是：%s' % anthor_id
     return HttpResponse(text)
+
+def dbsmysql(request):
+    cursor = connection.cursor()
+    cursor.execute('insert into book(id, name, author) values (null, "三题", "liucixing")')
+    return HttpResponse('插入数据')
